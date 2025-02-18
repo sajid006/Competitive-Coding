@@ -1,5 +1,5 @@
 # Given a number N and an array length L, create an array so that the array is strictly increasing and 
-# the AND of all the array elements is equal to N. 
+# the bitwise AND of all the array elements is equal to N. 
 # The last element of the array should be as small as possible. Return the last element of the array
 def myfunc(num, length):
     length = length - 1
