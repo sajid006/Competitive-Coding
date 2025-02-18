@@ -1,0 +1,26 @@
+# Given a number N and an array length L, create an array so that the array is strictly increasing and 
+# the AND of all the array elements is equal to N. 
+# The last element of the array should be as small as possible. Return the last element of the array
+def myfunc(num, length):
+    length = length - 1
+    res = ""
+    while num>0 or length>0:
+        # print(num, length)
+        if num%2 == 1:
+            res = res + "1"
+            num = num //2
+            continue
+        if length%2 == 0:
+            res = res + "0"
+            num = num //2
+            length = length //2
+        else:
+            res = res + "1"
+            num = num //2
+            length = length //2
+    return int(res[::-1], 2)
+
+a = int(input())
+b = int(input())
+
+print(f'{myfunc(a, b)}')
